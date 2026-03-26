@@ -22,34 +22,7 @@ const connection = mysql.createConnection({
     database : "JRT_APK",
     password : "password-2009"
 })
-// function getInfo(){
-//     return [
-//         faker.string.uuid(),
-//         faker.internet.username(),
-//         faker.internet.email(),
-//         faker.internet.password()
-//     ]
-// }
 
-
-// try{
-//     for(let i = 1 ; i <= 10 ; i++){
-//         users.push(getInfo())
-//     }
-// }catch(err){
-//     console.log("ERROR !")
-// }
-// try{
-//     await connection.query(q , (err , results)=>{
-//         if(err){
-//             throw err
-//         }
-//         console.log(results);
-//     })
-// }catch(err){
-//     console.log(err);
-//     res.send("SOMETHING WENT WORNG IN THE DATABASE !")
-// }
 
 app.set("view engine","ejs")
 app.set("views" , path.join(__dirname , "views"))
