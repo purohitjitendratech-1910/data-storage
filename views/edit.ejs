@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDIT NAME</title>
+</head>
+<body>
+    <h2>Hy! <%= USER.NAME %> you want to change your username:</h2>
+
+    <H4>THE ID OF USERS IS : <%= USER.ID %></H4>
+
+    <FORM METHOD="POST" action="/USERS/<%= USER.ID %>?_method=patch">
+        <TEXTAREA rows="5" cols="25" name="newName" style="display: block;"> <%= USER.NAME %> </TEXTAREA>
+        <input type="password" name="password" placeholder="Enter password">
+        <BUTTON>EDIT</BUTTON>
+    </FORM>
+    <h3>Do you want to delete the user?</h3>
+
+    
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="widTH>=device-widTH>, initial-scale=1.0">
+    <title>ALL USERS</title>
+</head>
+<body>
+    <table border="1">
+        <TR>
+            <TH>ID</TH>
+            <TH>USER NAME</TH>
+            <TH>EMAIL</TH>
+            <th>more feturs</th>
+        </TR>
+        <% for(user of users){ %>
+        <TR>
+            <TH> <%= user.ID %></TH>
+            <TH> <%= user.NAME %></TH>
+            <TH> <%= user.EMAIL %></TH>
+            <TH>
+                <form method="GET" action='/users/<%= user.ID %>/edit'>
+                    <button>Edit</button>
+                </form>
+            </th>
+
+            <th>                
+                <form method="get" action='/users/<%= user.ID %>/dlt'>
+                    <button>delete</button>
+                </form>
+            </TH>
+        </TR>
+        <% } %>
+    </table>
+    <form action="/users/add">
+        <BUTTON>ADD THE USER</BUTTON>
+    </form>
+</body>
+</html>
